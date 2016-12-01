@@ -1,0 +1,12 @@
+install.packages("raster")
+library(raster)
+install.packages("rgdal")
+library("rgdal")
+
+rm(list=ls())
+
+r1 <- brick("C:/Users/rshafique/Pictures/20160830 Offce Renovation/image.jpg")
+
+x <- crop(r1, extent(-500,500,-500,500))
+plotRGB(x)
+plotRGB(r1)
